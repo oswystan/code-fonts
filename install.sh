@@ -11,7 +11,10 @@
 
 function check_os() {
     os=`uname -s`
-    [ $os = "Darwin" ] && exit 0
+    [ $os != "Linux" ] && {
+        echo "only work on linux, EXIT!"
+        exit 0
+    }
 }
 
 function install_font() {
