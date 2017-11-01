@@ -19,9 +19,8 @@ function check_os() {
 
 function install_font() {
     sudo cp ./*.ttf /usr/share/fonts/
-    sudo mkfontscale
-    sudo mkfontdir
-    sudo fc-cache -fv
+    sudo cp ./*.otf /usr/share/fonts/
+    sudo mkfontscale && sudo mkfontdir && sudo fc-cache -fv
 }
 
 check_os
